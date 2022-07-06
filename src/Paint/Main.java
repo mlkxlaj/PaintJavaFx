@@ -12,7 +12,6 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-
 import javax.imageio.ImageIO;
 import java.awt.image.RenderedImage;
 import java.io.File;
@@ -23,7 +22,7 @@ import java.util.List;
 
 public class Main extends Application {
 
-    public String[] shapes = {"Rubber", "Pencil", "Sqare", "Oval", "Triangle", "Hexagon", "Custom"};
+    final public String[] shapes = {"Rubber", "Pencil", "Sqare", "Oval", "Triangle", "Hexagon", "Custom"};
     double x = 0;
     double y = 0;
     public String[] type = {"Fill", "Empty"};
@@ -33,7 +32,7 @@ public class Main extends Application {
     double[] posY = new double[30];
 
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) {
 
         FlowPane root = new FlowPane();
 
@@ -54,6 +53,7 @@ public class Main extends Application {
         canvasList.add(new Canvas(590, 440));
 
         Canvas canvas = new Canvas(590, 440);
+
         //============================================================
 
         List<String> canvasNames = new ArrayList<>();
